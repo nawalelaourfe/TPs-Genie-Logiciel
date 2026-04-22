@@ -1,0 +1,50 @@
+git add README.md .gitignore index.js package.json 
+ git commit -m "Initialisation du projet Node (README, .gitignore, index.js)" 
+git branch dev
+ git checkout dev 
+git add index.js
+git commit -m "Ajout de la fonction addition dans index.js"
+ git checkout main 
+git branch
+git branch -M main
+git merge dev
+git branch
+git checkout -b dev
+git add index.js
+git commit -m "Ajout de la fonction addition dans index.js"
+git checkout main
+git merge dev
+git checkout -b feature
+git add index.js 
+git commit -m "Ajout de la fonction soustraction" 
+ git checkout main 
+git add index.js 
+git commit -m "Doc: am‚liorer les commentaires de addition" 
+ git merge feature 
+git add index.js 
+git commit
+git checkout -b bugfix 
+git add index.js
+$ git commit -m "Bugfix: addition robuste (gŠre les NaN)" 
+ git commit -m "Bugfix: addition robuste (gŠre les NaN)" 
+git checkout main
+git rebase bugfix
+git log --oneline 
+ git checkout feature 
+git cherry-pick fd645f6
+git add index.js 
+git cherry-pick --continue 
+ git remote add origin git@github.com:nawalelaourfe/mon-projet-node.git
+git branch -M main 
+git push -u origin main 
+git remote set-url origin https://github.com/nawalelaourfe/mon-projet-node.git
+git push -u origin main
+git config --global user.name "nawalelaourfe" 
+git config --global user.email "nawalelaourfe16@gmail.com" 
+git pull origin main
+git push origin main 
+cd C:\Users\hp\TPs-Genie-Logiciel\TP1-Git-NodeJS
+notepad index.js
+notepad package.json
+notepad .gitignore
+doskey /history > C:\Users\hp\TPs-Genie-Logiciel\historique_git.txt
