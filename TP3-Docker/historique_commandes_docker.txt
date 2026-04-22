@@ -1,0 +1,50 @@
+echo     image: postgres:13
+echo     environment:
+echo       - POSTGRES_USER=admin
+echo       - POSTGRES_PASSWORD=adminpassword
+echo       - POSTGRES_DB=myapp
+echo     env_file:
+echo       - ./backend/db.env
+echo     volumes:
+echo       - db-data:/var/lib/postgresql/data
+echo     networks:
+echo       - app-network
+echo   pgadmin:
+echo     image: dpage/pgadmin4
+echo     environment:
+echo       - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+echo       - PGADMIN_DEFAULT_PASSWORD=admin
+echo     ports:
+echo       - "5050:80"
+echo     depends_on:
+echo       - db
+echo     networks:
+echo       - app-network
+echo volumes:
+echo   db-data:
+echo networks:
+echo   app-network:
+) > docker-compose.yml
+docker-compose up --build
+docker-compose down
+docker-compose up -d
+docker-compose down
+docker-compose up -d
+cd C:\Users\hp\TPs-Genie-Logiciel
+copy "C:\Users\hp\Desktop\smart_warehouse - Copie\tp docker\project\docker-compose.yml" TP3-Docker\
+copy "C:\Users\hp\Desktop\smart_warehouse - Copie\tp docker\project\frontend\Dockerfile" TP3-Docker\frontend\
+copy "C:\Users\hp\Desktop\smart_warehouse - Copie\tp docker\project\frontend\index.html" TP3-Docker\frontend\
+copy "C:\Users\hp\Desktop\smart_warehouse - Copie\tp docker\project\frontend\.dockerignore" TP3-Docker\frontend\
+copy "C:\Users\hp\Desktop\smart_warehouse - Copie\tp docker\project\backend\db.env" TP3-Docker\backend\
+dir TP3-Docker
+dir TP3-Docker\frontend
+dir TP3-Docker\backend
+cd C:\Users\hp\TPs-Genie-Logiciel
+git add .
+git commit -m "Ajout des TPs : Git/NodeJS, POO Java, Docker"
+git remote add origin https://github.com/nawalelaourfe/TPs-Genie-Logiciel.git
+git branch -M main
+git push -u origin main
+cd C:\Users\hp\Desktop\smart_warehouse - Copie\tp docker\project
+cd C:\Users\hp\TPs-Genie-Logiciel
+doskey /history > TP3-docker\historique_commandes_docker.txt
